@@ -22,6 +22,10 @@ M.general = {
     ["<C-l>"] = { "<C-w>l", "Window right" },
     ["<C-j>"] = { "<C-w>j", "Window down" },
     ["<C-k>"] = { "<C-w>k", "Window up" },
+    ["<leader>h"] = { "<C-w>h", "Window left" },
+    ["<leader>l"] = { "<C-w>l", "Window right" },
+    ["<leader>j"] = { "<C-w>j", "Window down" },
+    ["<leader>k"] = { "<C-w>k", "Window up" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
@@ -92,7 +96,7 @@ M.tabufline = {
     },
 
     -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
+    ["<C-x>"] = {
       function()
         require("nvchad.tabufline").close_buffer()
       end,
@@ -268,6 +272,7 @@ M.telescope = {
 
   n = {
     -- find
+    ["<C-p>"] = { "<cmd> Telescope git_files <CR>", "Git files" },
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
     ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
@@ -341,7 +346,7 @@ M.nvterm = {
     },
 
     -- new
-    ["<leader>h"] = {
+    ["<leader>."] = {
       function()
         require("nvterm.terminal").new "horizontal"
       end,

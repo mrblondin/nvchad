@@ -51,6 +51,7 @@ opt.whichwrap:append "<>[]hl"
 
 g.mapleader = " "
 
+
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
   vim.g["loaded_" .. provider .. "_provider"] = 0
@@ -113,3 +114,4 @@ local new_cmd = vim.api.nvim_create_user_command
 new_cmd("NvChadUpdate", function()
   require "nvchad.updater"()
 end, {})
+

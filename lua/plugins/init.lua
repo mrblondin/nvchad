@@ -262,6 +262,13 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+
+  {
+    "karb94/neoscroll.nvim",
+    init = function()
+      require('neoscroll').setup()
+    end,
+  }
 }
 
 local config = require("core.utils").load_config()

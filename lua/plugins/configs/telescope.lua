@@ -8,7 +8,7 @@ local options = {
       "--with-filename",
       "--line-number",
       "--column",
-      "--smart-case",
+--      "--smart-case",
     },
     prompt_prefix = "   ",
     selection_caret = "  ",
