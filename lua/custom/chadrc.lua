@@ -6,11 +6,13 @@ vim.api.nvim_set_hl(0, 'Comment', {fg = '#93949B'})
 
 -- no swap file
 vim.opt.swapfile = false
+vim.opt.relativenumber = true
 -- status line whole path
 --vim.opt.statusline = '%F'
+vim.opt.scrolloff = 8
+vim.opt.smartcase = true
 -- autoread
 vim.opt.autoread = true
-vim.opt.scrolloff = 8
 vim.api.nvim_create_autocmd('CursorHold', {
   pattern = '*',
   callback = function()
