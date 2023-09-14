@@ -19,3 +19,9 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+-- Telescope grep_string
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>fg', function()
+	builtin.grep_string({search = vim.fn.input("Grep > ")})
+end)
