@@ -81,14 +81,14 @@ M.tabufline = {
 
   n = {
     -- cycle through buffers
-    ["<S-m>"] = {
+      ["<C-}>"] = {
       function()
         require("nvchad.tabufline").tabuflineNext()
       end,
       "Goto next buffer",
     },
 
-    ["<S-n>"] = {
+    ["<C-{>"] = {
       function()
         require("nvchad.tabufline").tabuflinePrev()
       end,
@@ -275,8 +275,8 @@ M.telescope = {
     ["<C-p>"] = { "<cmd> Telescope git_files <CR>", "Git files" },
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "Grep string" },
+    ["<leader>fs"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<leader>fw"] = { "<cmd> Telescope grep_string <CR>", "Grep string" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },

@@ -11,6 +11,7 @@ vim.opt.relativenumber = true
 --vim.opt.statusline = '%F'
 vim.opt.scrolloff = 8
 vim.opt.smartcase = true
+vim.opt.scrolloff = 999
 -- autoread
 vim.opt.autoread = true
 vim.api.nvim_create_autocmd('CursorHold', {
