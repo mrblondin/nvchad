@@ -64,7 +64,10 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
--- require('lspconfig').clangd.setup{}
+require('lspconfig').clangd.setup{}
 require('lspconfig').pylsp.setup{}
+require('lspconfig').jsonls.setup{}
+require('lspconfig').tsserver.setup{}
+require('lspconfig').eslint.setup{}
 
 return M
