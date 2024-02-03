@@ -64,10 +64,13 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
-require('lspconfig').clangd.setup{}
-require('lspconfig').pylsp.setup{}
-require('lspconfig').jsonls.setup{}
-require('lspconfig').tsserver.setup{}
-require('lspconfig').eslint.setup{}
+-- this part is telling Neovim to use the lsp server
+local servers = { 'pylsp', 'tsserver', 'jsonls', 'clangd', 'eslint' }
+for _, lsp in pairs(servers) do
+  require('lspconfig')[lsp].setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities
+  }
+end
 
 return M
